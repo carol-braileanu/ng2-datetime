@@ -239,7 +239,7 @@ export class NKDatetime implements ControlValueAccessor, AfterViewInit, OnDestro
             }
             const meridian = date.getHours() >= 12 ? ' PM' : ' AM';
             const time =
-                this.pad(hours) + ':' +
+                hours + ':' +
                 this.pad(this.date.getMinutes()) + ':' +
                 (this.timepickerOptions.showSeconds ? ':' + this.pad(this.date.getSeconds()) : '') +
                 (this.timepickerOptions.showMeridian || this.timepickerOptions.showMeridian === undefined
