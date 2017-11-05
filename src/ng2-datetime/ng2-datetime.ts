@@ -241,7 +241,7 @@ export class NKDatetime implements ControlValueAccessor, AfterViewInit, OnDestro
             const time =
                 this.pad(hours) + ':' +
                 this.pad(this.date.getMinutes()) + ':' +
-                this.pad(this.date.getSeconds()) +
+                (this.timepickerOptions.showSeconds ? ':' + this.pad(this.date.getSeconds()) : '') +
                 (this.timepickerOptions.showMeridian || this.timepickerOptions.showMeridian === undefined
                     ? meridian : '');
             this.timepicker.timepicker('setTime', time);
