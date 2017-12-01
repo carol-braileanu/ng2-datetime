@@ -1,5 +1,5 @@
 {
-  "name": "ng2-datetime",
+  "name": "flowconcept-ng2datetime",
   "version": "1.4.0",
   "description": "Bootstrap datetime picker for Angular",
   "main": "ng2-datetime.js",
@@ -23,7 +23,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nkalinov/ng2-datetime.git"
+    "url": "https://github.com/carol-braileanu/ng2-datetime"
   },
   "dependencies": {
     "bootstrap": ">=3.0.0",

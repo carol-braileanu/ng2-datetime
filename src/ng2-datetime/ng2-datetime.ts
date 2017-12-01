@@ -49,7 +49,9 @@ const CUSTOM_ACCESSOR = {
         </div>
     `,
     styles: [
-        '.ng2-datetime *[hidden] { display: none; }'
+        `.ng2-datetime *[hidden] { display: none; }
+		.input-group { display: inline-table }
+		`
     ]
 })
 
@@ -240,7 +242,7 @@ export class NKDatetime implements ControlValueAccessor, AfterViewInit, OnDestro
             const meridian = date.getHours() >= 12 ? ' PM' : ' AM';
             const time =
                 hours + ':' +
-                this.pad(this.date.getMinutes()) + ':' +
+                this.pad(this.date.getMinutes()) +
                 (this.timepickerOptions.showSeconds ? ':' + this.pad(this.date.getSeconds()) : '') +
                 (this.timepickerOptions.showMeridian || this.timepickerOptions.showMeridian === undefined
                     ? meridian : '');
